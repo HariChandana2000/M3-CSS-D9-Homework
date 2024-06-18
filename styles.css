@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.watches {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.watches img {
+  max-width: 350px;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px -1px rgb(202, 201, 201);
+  transform-origin: center;
+  transform: perspective(800px) rotateY(20deg);
+  transition: 0.5s;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+.watches:hover img {
+  opacity: 0.5;
+}
+
+.watches img:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}
